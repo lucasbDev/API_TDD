@@ -1,0 +1,28 @@
+{
+  "name": "API_TDD",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "lint": "src/** test/** --fix",
+    "secure-mode": "jest --watchAll --verboose=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "5.10.0",
+    "jest": "23.6.0",
+    "supertest": "3.3.0"
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "consign": "0.1.5",
+    "express": "4.16.4",
+    "knex": "0.15.2",
+    "pg": "7.7.1"
+  },
+  "typings": ""
+}
