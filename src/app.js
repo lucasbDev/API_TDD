@@ -33,11 +33,11 @@ app.get('/', (req, res) => {
   res.status(200).send();
 });
 
-app.db.on('query', (query) => {
-  console.log({sql: query.sql, bidings: query.bidings ? query.bidings.join(","):""});
-} )
-.on("query-response", response => console.log(response))
-.on('error', error => console.log(error));
+// app.db.on('query', (query) => {
+//   console.log({sql: query.sql, bidings: query.bidings ? query.bidings.join(","):""});
+// } )
+// .on("query-response", response => console.log(response))
+// .on('error', error => console.log(error));
 
 
 

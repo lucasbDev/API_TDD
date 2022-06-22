@@ -7,7 +7,9 @@ module.exports = (app) => {
   };
   //retorna status e o array de users
   const create = async (req,res) => {
-    const result = await app.services.user.save(req.body)// * todas as insertes
+    const result = await app.services.user.save(req.body);// * todas as insertes
+    // if(result.error) return res.status(400).json(result);
+    if(result.error) return res.status(400).json(result)
     res.status(201).json(result[0]);
   };
   

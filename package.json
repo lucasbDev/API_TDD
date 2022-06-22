@@ -7,7 +7,7 @@
     "start": "node src/server.js",
     "test": "jest",
     "lint": "src/** test/** --fix",
-    "secure-mode": "jest --watchAll --verboose=true"
+    "secure-mode": "jest --watchAll --verboose=false"
   },
   "keywords": [],
   "author": "",
