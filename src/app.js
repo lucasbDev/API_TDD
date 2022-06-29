@@ -22,6 +22,7 @@ consign({
     cwd: 'src',
     verboose: false,
   })
+  .include('./config/passport.js')
   // .include('./config/middlewares.js')
   .then('./services')
   .then('./routes')
