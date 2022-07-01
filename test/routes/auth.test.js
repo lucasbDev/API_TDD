@@ -49,7 +49,7 @@ test('Não deve auth com passwd wrong', () => {
 });
 
 test('Não deve acessar rota sem token', () => {
-  return request(app).get('/users')
+  return request(app).get('/Safe/users')
     .then((res) => {
       expect(res.status).toBe(401)
     });

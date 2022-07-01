@@ -5,10 +5,13 @@ module.exports = (app) => {
   const save = async (account) => {
     if(!account.name) throw new ValidationError ('é obrigatório o preenchimento do campo nome!')
 
+    const accDb = await find({ name: account.name, user_id: account.user_id}); //tratamento para nome de conta duplicada
+    if (accDb) throw new ValidationError('Esse nome já está vinculado a uma conta')
+
     return app.db('accounts').insert(account, '*')
   };
-  const findAll = ( ) => {
-    return app.db('accounts')
+  const findAll = (userId) => {
+    return app.db('accounts').where({user_id: userId})
   };
 
   const find = (filter = {} ) => {
