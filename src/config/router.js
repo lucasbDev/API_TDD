@@ -9,6 +9,7 @@ module.exports = (app) => {
 
     SafeRouter.use('/users',app.routes.users);
     SafeRouter.use('/accounts',app.routes.accounts);
+    SafeRouter.use('/transactions',app.routes.transactions);
 
     app.use('/Safe', app.config.passport.authenticate(), SafeRouter)
     /*

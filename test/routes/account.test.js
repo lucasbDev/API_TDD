@@ -11,7 +11,7 @@ beforeEach(async () => {
   const res = await app.services.user.save({ name: 'user account', mail: `${Date.now()}@mail.com`, passwd: '123456'})
   user = { ...res[0]};
   user.token = jwt.encode(user, 'Segredo!');
-  const res2 = await app.services.user.save({ name: 'user account #2', mail: `${Date.now()}@mail.com`, passwd: '123456'})
+  const res2 = await app.services.user.save({ name: 'user account #2', mail: `${Date.now()}@mail.com`, passwd: '123456' })
   user2 = { ...res2[0]};
 });
 
@@ -50,7 +50,9 @@ test('não deve inserir conta de nome duplicado', () => {
 
 })
 
-test('deve retornar apenas uma conta', () => {
+test('deve retornar apenas uma conta', async() => {
+  await app.db('transactions').del()
+  await app.db('accounts').del()
   return app.db('accounts').insert([
     { name:'user account #1', user_id: user.id },
     { name: 'user account #2', user_id: user2.id },
