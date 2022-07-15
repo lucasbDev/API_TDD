@@ -1,0 +1,1 @@
+"test": "jest --coverage --runInBand --forceExit"
