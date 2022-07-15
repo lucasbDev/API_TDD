@@ -52,6 +52,7 @@ test('não deve inserir conta de nome duplicado', () => {
 
 test('deve retornar apenas uma conta', async() => {
   await app.db('transactions').del()
+  await app.db('transfers').del()
   await app.db('accounts').del()
   return app.db('accounts').insert([
     { name:'user account #1', user_id: user.id },
