@@ -7,7 +7,7 @@ Para rodar o projeto local, basta fazer um clone do projeto e iniciar na sua má
 para isso:
 
 ```bash
-git clone https://github.com/lucastavaresas/API_rest.git
+git clone https://github.com/lucasbDev/API_rest.git
 ```
 
 ## Instalação
