@@ -17,7 +17,7 @@ Para instalar o projeto, primeiramente é necessário instalar o [Node.js](https
 Agora se faz necessário iniciar o npm que pode ser instalando via terminal da seguinte forma:
 
 ```bash
-npm init
+npm init -y
 ```
 
 ## Utlização
