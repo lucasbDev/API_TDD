@@ -14,10 +14,10 @@ git clone https://github.com/lucasbDev/API_rest.git
 
 Para instalar o projeto, primeiramente é necessário instalar o [Node.js](https://nodejs.org/en/)
 
-Agora se faz necessário iniciar o npm que pode ser instalando via terminal da seguinte forma:
+Agora se faz necessário baixar as dependências via terminal da seguinte forma:
 
 ```bash
-npm init -y
+npm install
 ```
 
 ## Utlização
